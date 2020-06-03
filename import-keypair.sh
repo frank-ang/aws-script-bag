@@ -2,7 +2,7 @@
 KEYFILE="fileb://$1"
 KEYNAME="$2"
 REGION="$3"
-if [ -z "$KEYFILE" ] | [ -z "$KEYNAME" ] | [ -z "$REGION" ]; then
+if [ -z "$1" ] | [ -z "$KEYNAME" ] | [ -z "$REGION" ]; then
     echo "Usage $0 [KEYFILE] [KEYNAME] [REGION]" 1>&2
     exit 1
 fi

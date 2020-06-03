@@ -1,0 +1,3 @@
+HOST=REPLACE_ME 
+BASE_URL="https://$HOST/"
+LOGIN_URL="$BASE_URL""blog/wp-login.php"

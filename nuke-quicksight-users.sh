@@ -7,7 +7,7 @@ REGION=us-east-1
 ACCOUNT=`aws sts get-caller-identity --query 'Account' --output text`
 
 if [ -z "$ACCOUNT" ] ; then
-	echo "Account ID not found"
+	echo "Account ID not provided"
 	exit 1
 fi
 if [ -z "$REGION" ] ; then

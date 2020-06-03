@@ -1,0 +1,26 @@
+#!/bin/bash
+# Setup a simple web server on ALinux
+yum -y update
+yum install -y ruby
+cd /home/ec2-user
+curl -O https://aws-codedeploy-ap-southeast-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+
+yum install -y httpd24 mysql57 php72 php72-mysqlnd
+httpd start
+
+# setup welcome page
+# sudo sh -c 'echo "Hello World" > /var/www/html/index.html'
+echo "Hello World" > /var/www/html/index.html
+
+# setup Utilities
+yum install -y jq tmux
+
+# load testing
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
+yum install -y nodejs
+sudo npm install -g artillery --unsafe-perm=true --allow-root
+# path is at /usr/local/bin/artillery
+
