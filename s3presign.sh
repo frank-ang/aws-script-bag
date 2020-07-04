@@ -7,6 +7,6 @@ if [ -z "$S3_URI" ]; then
     exit 1
 fi
 
-echo signing S3_URI:$S3_URI, with expiry secs:$EXPIRE_SECONDS
+echo "signing S3_URI:$S3_URI, with expiry secs:$EXPIRE_SECONDS (max 604799)"
 
 aws s3 presign "$S3_URI" --expires-in "$EXPIRE_SECONDS"

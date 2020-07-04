@@ -6,7 +6,7 @@ if [ -f "config.gitignore" ]; then
 fi
 
 i=1
-until [ $i -gt 200 ]; do
+until [ $i -gt 500 ]; do
 	echo "$i" `date +%Y-%m-%dT%H:%M:%S%z` `curl -o /dev/null -s -w "%{http_code}\n" -X POST $LOGIN_URL`
 	i=$((i+1))
 	sleep 1
