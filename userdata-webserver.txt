@@ -15,7 +15,7 @@ httpd start
 echo "Hello World" > /var/www/html/index.html
 
 # setup Utilities
-yum install -y jq tmux
+yum install -y jq tmux nc
 
 # load testing
 yum install -y gcc-c++ make
