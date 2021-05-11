@@ -12,16 +12,12 @@ Example:
 
 To run:
 
-1. Edit the file [s3/test-s3-presign-upload.sh]() , set your parameters for ```S3_BUCKET``` and ```S3_PATH```
+1. Edit the file [test-s3-presign-upload.sh](test-s3-presign-upload.sh) , set your parameters for ```S3_BUCKET``` and ```S3_PATH```
 
 2. Run the Bash test script ```test-s3-presign-upload.sh```
 
 ```bash
 $ ./test-s3-presign-upload.sh 
--bash: ./test-s3-presign-upload.sh: No such file or directory
-frankang@large:aws-script-bag$ cd -
-/Users/frankang/lab/Playground/aws-script-bag/s3
-frankang@large:s3$ ./test-s3-presign-upload.sh 
 ##### Uploading to S3_PRESIGN_PUT_URL : https://sandbox00-datalake-sin.s3.amazonaws.com/upload/foo.txt?AWSAccessKeyId=SOMETHINGSOMETHINGREDACTED&Signature=SOMETHINGSOMETHINGREDACTED%2BvcpDTM4%3D&Expires=1620725720
 ### Uploading file:/tmp/foo.txt to S3 Presign URL:https://sandbox00-datalake-sin.s3.amazonaws.com/upload/foo.txt?AWSAccessKeyId=SOMETHINGSOMETHINGREDACTED&Signature=SOMETHINGSOMETHINGREDACTED%2BvcpDTM4%3D&Expires=1620725720
 *   Trying 52.219.32.216...
