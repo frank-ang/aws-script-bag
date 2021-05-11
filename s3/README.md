@@ -70,6 +70,7 @@ frankang@large:s3$ ./test-s3-presign-upload.sh
                                  Dload  Upload   Total   Spent    Left  Speed
 100    29  100    29    0     0    252      0 --:--:-- --:--:-- --:--:--   252
 PASSED: files are identical
-frankang@large:s3$ 
 
 ```
+
+Successful test displays the ```PASSED``` message.
