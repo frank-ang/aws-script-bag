@@ -2,7 +2,13 @@
 
 ## Example S3 signed URL upload / download.
 
-Example to: 1. Generate an S3 Signed URL for PUT, 2. PUT a file, 3. Generate an S3 Signed URL for GET, 4. Download the file, 5. compare the uploaded and downloaded files.
+Example:
+
+> 1. Generate an S3 Signed URL for PUT, 
+> 2. PUT a file, 
+> 3. Generate an S3 Signed URL for GET, 
+> 4. GET the file, 
+> 5. Compare the uploaded and downloaded files, should be identical.
 
 To run:
 
