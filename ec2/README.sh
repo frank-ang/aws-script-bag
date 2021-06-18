@@ -1,5 +1,21 @@
 # EC2 stuff.
 
+# Create EC2 Host via CLI
+
+```
+. ./parameters.gitignore
+
+aws ec2 run-instances \
+    --image-id $AMI \
+    --instance-type t3.micro \
+    --key-name $KEYPAIR \
+    --security-group-ids $SECURITY_GROUP_IDS \
+    --subnet-id $SUBNET_ID \
+    --user-data file://userdata-bastion.txt \
+    --iam-instance-profile $IAM_INSTANCE_PROFILE \
+    --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=bastion}]' 'ResourceType=volume,Tags=[{Key=Name,Value=bastion}]'
+```
+
 
 # Attach additional EBS volume to Ubuntu Linux
 

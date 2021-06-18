@@ -1,0 +1,12 @@
+yum -y update
+yum install -y ruby
+cd /home/ec2-user
+curl -O https://aws-codedeploy-ap-southeast-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+yum install -y mysql57
+yum install -y jq tmux
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
+yum install -y nodejs
+npm install -g artillery --unsafe-perm=true --allow-root
