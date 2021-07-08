@@ -64,3 +64,12 @@ UUID=YOUR_VOLUME_UUID  /data  xfs  defaults,nofail  0  2
 sudo umount /data
 sudo mount -a
 ```
+
+
+## Describe Instances
+
+Example: Describe all instances, printing InstanceId, Name(tag), IamInstanceProfile. Non-paginated.
+
+```
+aws ec2 describe-instances  --query 'Reservations[].Instances[].[InstanceId,Tags[?Key==`Name`],IamInstanceProfile]'
+```
