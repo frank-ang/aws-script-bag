@@ -3,7 +3,7 @@ from botocore.client import Config
 import argparse
 
 
-def create_presigned_put_url(bucket_name, object_name, expiration=3600):
+def create_presigned_put_url(bucket_name, object_name, expiration=604800):
     """Generate a presigned URL to share an S3 object
 
     :param bucket_name: string
@@ -28,13 +28,11 @@ def create_presigned_put_url(bucket_name, object_name, expiration=3600):
 
 
 parser = argparse.ArgumentParser("generate_signed_url")
-parser.add_argument("bucket", help="S3 Bucket", type=str)
-parser.add_argument("key", help="S3 key", type=str)
-parser.add_argument("expires_in", help="Expire in", nargs='?', const=1, type=int)
+parser.add_argument("--bucket", help="S3 Bucket", type=str, required=True)
+parser.add_argument("--key", help="S3 key", type=str, required=True)
+parser.add_argument("--expires_in", help="Expire in", type=int, default=604800)
 args = parser.parse_args()
-bucket_name=args.bucket
-object_name=args.key
 
-url = create_presigned_put_url(bucket_name, object_name, expiration=3600)
+url = create_presigned_put_url(args.bucket, args.key, args.expires_in)
 
 print(url)
