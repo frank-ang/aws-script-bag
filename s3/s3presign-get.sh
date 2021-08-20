@@ -1,6 +1,6 @@
 #!/bin/bash
 S3_URI=$1
-EXPIRE_SECONDS=${2:-3600} 
+EXPIRE_SECONDS=${2:-604800} 
 
 if [ -z "$S3_URI" ]; then
     echo "Usage $0 [S3_URI]" 1>&2
