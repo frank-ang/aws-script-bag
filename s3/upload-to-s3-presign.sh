@@ -5,6 +5,7 @@ S3_BUCKET=$2
 S3_PATH=$3
 if [ -z "$FILE" ] | [ -z "$S3_BUCKET" ] | [ -z "$S3_PATH" ]; then
     echo "Usage $0 [FILE] [S3_BUCKET] [S3_PATH]" 1>&2
+    echo "E.g. $0 local.txt mybucket share/remote.txt" 1>&2
     exit 1
 fi
 
